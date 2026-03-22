@@ -272,14 +272,14 @@ export default function About() {
               },
               {
                 name: "Jeswin Prabhagaran",
-                role: "CTO & Founding Partner",
+                role: "Head Founder",
                 initials: "JP",
                 description: "Pioneering agentic frameworks and leading engineering architecture at ZestFlow.",
                 delay: 0.1
               },
               {
                 name: "Mohamed Arsath",
-                role: "CEO & Founding Partner",
+                role: "Director",
                 initials: "MA",
                 description: "Strategizing enterprise AI adoption and fostering high-value client partnerships.",
                 delay: 0.2
