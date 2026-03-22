@@ -242,6 +242,102 @@ export default function About() {
           ))}
         </div>
       </div>
+
+      {/* Founders Section - Dark Theme */}
+      <div className="bg-[#080808] py-24 md:py-32 relative overflow-hidden">
+        {/* Subtle Background Glows */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+
+        <div className="container px-4 mx-auto relative z-10 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-white/30 uppercase tracking-[0.4em] text-xs font-bold mb-4">
+              The Founders
+            </h2>
+          </motion.div>
+
+          <div className="grid gap-16 md:grid-cols-3 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Aadthiya",
+                role: "Proprietor",
+                initials: "AA",
+                description: "Directing the vision and operational excellence of Goodwill Global Exports with a focus on sustainable growth and global quality standards.",
+                delay: 0
+              },
+              {
+                name: "Jeswin Prabhagaran",
+                role: "CTO & Founding Partner",
+                initials: "JP",
+                description: "Pioneering agentic frameworks and leading engineering architecture at ZestFlow.",
+                delay: 0.1
+              },
+              {
+                name: "Mohamed Arsath",
+                role: "CEO & Founding Partner",
+                initials: "MA",
+                description: "Strategizing enterprise AI adoption and fostering high-value client partnerships.",
+                delay: 0.2
+              }
+            ].map((founder, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ 
+                  delay: founder.delay, 
+                  duration: 0.8,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
+                className="text-center group"
+              >
+                {/* Premium Avatar Circle */}
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                  className="relative mx-auto w-44 h-44 mb-10"
+                >
+                  {/* Outer Rings */}
+                  <div className="absolute inset-0 bg-white/5 rounded-full border border-white/10 group-hover:border-accent/40 transition-all duration-500 shadow-2xl" />
+                  <div className="absolute inset-4 rounded-full border border-white/5 group-hover:border-accent/20 transition-all duration-500" />
+                  
+                  {/* Inner Content */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white/20 group-hover:text-white/60 transition-all duration-500 tracking-tighter font-sans">
+                      {founder.initials}
+                    </span>
+                  </div>
+
+                  {/* Dynamic Glow Effect */}
+                  <div className="absolute inset-0 rounded-full bg-accent/0 group-hover:bg-accent/10 blur-3xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
+                  
+                  {/* Decorative Particles (Simulated with pseudo-elements in CSS if needed, or simple divs) */}
+                  <div className="absolute -top-2 -right-2 w-2 h-2 bg-accent/40 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute -bottom-4 -left-1 w-1 h-1 bg-white/20 rounded-full blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </motion.div>
+
+                <motion.h3 
+                  className="text-2xl font-bold text-white mb-2 group-hover:translate-y-[-2px] transition-transform duration-300"
+                >
+                  {founder.name}
+                </motion.h3>
+                <div className="text-accent text-sm font-bold uppercase tracking-[0.2em] mb-6">
+                  {founder.role}
+                </div>
+                <p className="text-white/40 leading-relaxed text-sm max-w-[300px] mx-auto group-hover:text-white/70 transition-all duration-400">
+                  {founder.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
