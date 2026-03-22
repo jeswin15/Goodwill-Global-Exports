@@ -1,0 +1,76 @@
+You are a senior full-stack web developer building a premium B2B export showcase website.
+
+GOAL:
+Build a professional B2B website to showcase raw food products to foreign business clients.
+
+TARGET AUDIENCE:
+International business owners and importers.
+
+TECH STACK:
+- Frontend: HTML, Tailwind CSS, Vanilla JavaScript
+- Backend: Node.js with Express
+- Email: Nodemailer
+- Data storage: JSON file (no database)
+
+DESIGN REQUIREMENTS:
+- Light theme with premium, minimal, corporate flow
+- Export-industry style design
+- Smooth layout, clean typography
+- Fully responsive (mobile + desktop)
+- Professional color palette (white, soft gray, subtle accent color)
+
+PAGES (ALL IN SEPARATE FILES):
+1. Home
+   - Hero section introducing the export business
+   - Highlights of product quality and trust
+   - Call-to-action buttons
+
+2. About Us
+   - Company overview
+   - Mission & vision
+   - Export focus
+
+3. Products
+   - Two categories:
+     a) Regular Products
+     b) Seasonal Exclusive Products
+   - Product cards with name, description, category
+   - Backend API to:
+     - Add new products
+     - Delete products
+   - Products stored in a JSON file
+
+4. Licenses
+   - Display export-related licenses and certifications
+   - Clean showcase layout
+
+5. Contact Us
+   - Show company contact details
+   - Contact form with:
+     - Name
+     - Email
+     - Message
+   - On submit:
+     - Send email to business owner using Nodemailer
+     - Clear the form after successful submission
+
+BACKEND REQUIREMENTS:
+- Express server
+- API routes for:
+  - Get products
+  - Add product
+  - Delete product
+- Email sending using environment variables for credentials
+- Clean and readable code
+
+OTHER REQUIREMENTS:
+- Proper folder structure
+- Clear comments in code
+- Beginner-friendly but professional
+- Ready to run in Replit without extra setup
+- Include instructions to run the project in Replit
+
+OUTPUT EXPECTATION:
+- Generate all necessary files
+- Provide complete working code
+- Ensure premium B2B look and feel
